@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lzf.hotelcheckinsystem.RegisterActivity">
+
+    <RelativeLayout
+        android:id="@+id/idCard"
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:layout_alignParentTop="true">
+
+
+        <ImageView
+            android:id="@+id/useImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:onClick="doClick"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/cameraChoose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="60dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/photograph"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="doClick"
+                android:text="拍摄"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/localPhotos"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="doClick"
+                android:text="选择本地照片"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idCard"
+        android:layout_margin="20dp"
+        android:hint="姓名"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/identity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_margin="20dp"
+        android:hint="身份证号"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/identity"
+        android:layout_margin="20dp"
+        android:hint="一定要记住密码哦"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_margin="20dp"
+        android:onClick="doClick"
+        android:text="提交"/>
+</RelativeLayout>

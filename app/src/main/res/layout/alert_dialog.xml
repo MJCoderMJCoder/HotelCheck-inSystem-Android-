@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/checkinRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/checkinTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="入住时间："
+            android:textSize="15sp"/>
+
+        <DatePicker
+            android:id="@+id/checkinDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkinTV"
+            android:layout_centerHorizontal="true"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:minDate="05/24/2018"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/checkoutRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkinRL">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/checkoutTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:minDate="05/24/2018"
+            android:text="退房时间："
+            android:textSize="15sp"/>
+
+        <DatePicker
+            android:id="@+id/checkoutDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkoutTV"
+            android:layout_centerHorizontal="true"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:minDate="05/24/2018"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkoutRL"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="总费用：0"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/pay"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/fee"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="确认支付"/>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fee"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="取消"/>
+
+
+</RelativeLayout>

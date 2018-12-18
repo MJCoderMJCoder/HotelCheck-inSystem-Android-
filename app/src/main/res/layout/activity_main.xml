@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context="com.lzf.hotelcheckinsystem.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="doClick"
+            android:text="登录"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="137dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="doClick"
+            android:text="注册"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="137dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <EditText
+            android:id="@+id/ipAddress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/identity"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="192.168.17.251"/>
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/ipAddress"
+            android:layout_margin="100dp"
+            android:layout_weight="1"
+            android:onClick="doClick"
+            android:text="开始演示"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="137dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="100dp"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+    </LinearLayout>
+</LinearLayout>

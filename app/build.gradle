@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.lzf.hotelcheckinsystem"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //Glide是一个快速高效的开源Android媒体管理和图像加载框架，将媒体解码，内存和磁盘缓存以及资源池整合到一个简单易用的界面中。
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
+    //annotationProcessor 'com.github.bumptech.glide:compiler:3.6.1'
+
+    //OkHttp 适用于Android和Java应用程序的HTTP和HTTP / 2客户端
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okio:okio:1.10.0'
+
+    //百度文字识别：身份证识别
+    compile files('libs/ocr-sdk.jar')
+}
